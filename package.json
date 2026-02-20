@@ -1,0 +1,19 @@
+{
+	"name": "myapp",
+	"scripts": {
+		"dev": "wrangler dev",
+		"deploy": "wrangler deploy --minify",
+		"db:generate": "node scripts/models-gen.mjs && drizzle-kit generate",
+		"db:migrate": "wrangler d1 migrations apply myapp --local",
+		"cf-typegen": "wrangler types --env-interface CloudflareBindings"
+	},
+	"dependencies": {
+		"drizzle-orm": "^0.44.7",
+		"hono": "^4.7.9"
+	},
+	"devDependencies": {
+		"@types/node": "^22.15.21",
+		"drizzle-kit": "^0.31.5",
+		"wrangler": "^4.14.4"
+	}
+}
