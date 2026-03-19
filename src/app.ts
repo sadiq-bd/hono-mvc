@@ -1,4 +1,4 @@
-import { Context, Hono } from "hono";
+import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { contextStorage } from "hono/context-storage";
 import { globalErrorHandler, notFoundHandler } from "./core/errors";

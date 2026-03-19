@@ -6,9 +6,11 @@
 		"test": "bun test",
 		"db:generate": "drizzle-kit generate",
 		"db:migrate": "wrangler d1 migrations apply myapp --local",
-		"cf-typegen": "wrangler types --env-interface CloudflareBindings"
+		"cf-typegen": "wrangler types --env-interface CloudflareBindings",
+		"make:feature": "bun run scripts/make-feature.ts"
 	},
 	"dependencies": {
+		"@cloudflare/workers-types": "^4.20260317.1",
 		"@hono/zod-validator": "^0.7.6",
 		"drizzle-orm": "^0.44.7",
 		"hono": "^4.7.9",

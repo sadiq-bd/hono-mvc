@@ -22,6 +22,12 @@
 		    "database_id": ""
 		}
 	],
+	"kv_namespaces": [
+		{
+			"binding": "KV_CACHE",
+			"id": "local-cache"
+		}
+	],
 	"observability": {
 		"enabled": true
 	}
