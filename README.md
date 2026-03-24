@@ -1,3 +1,5 @@
+<p align="left"> <img src="https://api.sadiq.workers.dev/app/github/repo/hono-starter/views?nocache=true" alt="" /> </p>
+
 <div align="center">
   <h1>🚀 Hono Backend Starter</h1>
   <p>A modern, feature-based TypeScript backend template powered by Hono, Bun, Drizzle ORM, and Cloudflare Workers.</p>
