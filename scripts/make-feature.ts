@@ -104,6 +104,32 @@ export const create${Name}Schema = z.object({
 export const update${Name}Schema = create${Name}Schema.partial();
 `;
 
+const createTestContent = (name: string, Name: string) => `import { describe, expect, it } from 'bun:test';
+import { Hono } from 'hono';
+import \${name}Routes from './routes';
+
+describe('\${Name} Routes', () => {
+  const app = new Hono();
+  app.route('/', \${name}Routes);
+
+  it('GET / should return all \${name}', async () => {
+    const res = await app.request('/');
+    expect(res.status).toBe(200);
+    const body = await res.json();
+    expect(body).toHaveProperty('data');
+  });
+
+  it('POST / should create a \${name}', async () => {
+    const res = await app.request('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: 'Test \${Name}' })
+    });
+    expect(res.status).toBe(201);
+  });
+});
+`;
+
 async function main() {
   try {
     console.log(`🚀 Generating feature module: ${feature}...`);
