@@ -1,4 +1,4 @@
-<p align="left"> <img src="https://api.sadiq.workers.dev/app/github/repo/hono-starter/views?nocache=true" alt="" /> </p>
+<p align="left"> <img src="https://api.sadiq.workers.dev/app/github/repo/hono-starter/views?nocache" alt="" /> </p>
 
 <div align="center">
   <h1>🚀 Hono Backend Starter</h1>
